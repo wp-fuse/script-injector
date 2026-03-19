@@ -77,7 +77,7 @@ if ( is_admin() ) {
 		);
 	} );
 
-	return; // Nothing else needed on admin requests
+	return;
 }
 
 // Front-end only
