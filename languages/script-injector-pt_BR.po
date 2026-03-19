@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Script Injector 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:33+0000\n"
+"PO-Revision-Date: 2026-03-19 15:33-0300\n"
+"Last-Translator: wpfuse <admin@wpfuse.net>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: script-injector.php:33
+msgid "Scripts Settings"
+msgstr "Configurações de Scripts"
+
+#: script-injector.php:36
+msgid "Scripts in <head>"
+msgstr "Scripts no <head>"
+
+#: script-injector.php:36
+msgid "Injected before </head> via wp_head — e.g. Google Tag (gtag.js)"
+msgstr "Injetado antes do </head> via wp_head — ex. Google Tag (gtag.js)"
+
+#: script-injector.php:37
+msgid "Scripts after <body>"
+msgstr "Scripts após <body>"
+
+#: script-injector.php:37
+msgid "Injected right after <body> via wp_body_open — e.g. GTM noscript iframe"
+msgstr "Injetado logo após <body> via wp_body_open — ex. GTM noscript iframe"
+
+#: script-injector.php:38
+msgid "Scripts in <footer>"
+msgstr "Scripts no <footer>"
+
+#: script-injector.php:38
+msgid "Injected before </body> via wp_footer — e.g. Facebook Pixel, chat widget"
+msgstr "Injetado antes do </body> via wp_footer — ex. Facebook Pixel, chat widget"
+
+#: script-injector.php:62
+#: script-injector.php:63
+#: script-injector.php:70
+msgid "Scripts"
+msgstr "Scripts"
+
+#: script-injector.php:68
+msgid "You do not have permission to access this page."
+msgstr "Você não tem permissão para acessar esta página."

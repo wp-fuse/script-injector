@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Script Injector 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 15:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: script-injector.php:33
+msgid "Scripts Settings"
+msgstr ""
+
+#: script-injector.php:36
+msgid "Scripts in <head>"
+msgstr ""
+
+#: script-injector.php:36
+msgid "Injected before </head> via wp_head — e.g. Google Tag (gtag.js)"
+msgstr ""
+
+#: script-injector.php:37
+msgid "Scripts after <body>"
+msgstr ""
+
+#: script-injector.php:37
+msgid "Injected right after <body> via wp_body_open — e.g. GTM noscript iframe"
+msgstr ""
+
+#: script-injector.php:38
+msgid "Scripts in <footer>"
+msgstr ""
+
+#: script-injector.php:38
+msgid "Injected before </body> via wp_footer — e.g. Facebook Pixel, chat widget"
+msgstr ""
+
+#: script-injector.php:62
+#: script-injector.php:63
+#: script-injector.php:70
+msgid "Scripts"
+msgstr ""
+
+#: script-injector.php:68
+msgid "You do not have permission to access this page."
+msgstr ""
