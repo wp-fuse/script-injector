@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Script Injector
- * Description:       Insere códigos no header, body e footer do site (Google Analytics, Tag Manager, etc.).
+ * Description:       Insert custom scripts into the site header, body, and footer (Google Analytics, Tag Manager, etc.).
  * Version:           1.0.1
  * Author:            wpfuse
  * Author URI:        https://wpfuse.net
@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Registra configurações e campos
+// Register settings and fields
 add_action( 'admin_init', function() {
 	register_setting( 'si_settings_group', 'si_settings', 'si_sanitize_settings' );
 
 	add_settings_section(
 		'si_main_section',
-		__( 'Configurações de Scripts', 'script-injector' ),
-		'', // sem callback
+		__( 'Scripts Settings', 'script-injector' ),
+		'', // no callback
 		'si_scripts'
 	);
 
@@ -28,7 +28,7 @@ add_action( 'admin_init', function() {
 		'si_header_scripts',
 		sprintf(
 			'%s<br><small style="color:#999;font-weight:normal;">%s</small>',
-			esc_html__( 'Scripts no <head>', 'script-injector' ),
+			esc_html__( 'Scripts in <head>', 'script-injector' ),
 			esc_html__( 'Ex. Google Tag (gtag.js)', 'script-injector' )
 		),
 		'si_header_field_render',
@@ -39,7 +39,7 @@ add_action( 'admin_init', function() {
 		'si_body_scripts',
 		sprintf(
 			'%s<br><small style="color:#999;font-weight:normal;">%s</small>',
-			esc_html__( 'Scripts após <body>', 'script-injector' ),
+			esc_html__( 'Scripts after <body>', 'script-injector' ),
 			esc_html__( 'Ex. GTM noscript iframe', 'script-injector' )
 		),
 		'si_body_field_render',
@@ -50,8 +50,8 @@ add_action( 'admin_init', function() {
 		'si_footer_scripts',
 		sprintf(
 			'%s<br><small style="color:#999;font-weight:normal;">%s</small>',
-			esc_html__( 'Scripts no <footer>', 'script-injector' ),
-			esc_html__( 'Ex. Facebook Pixel ou chat widget', 'script-injector' )
+			esc_html__( 'Scripts in <footer>', 'script-injector' ),
+			esc_html__( 'Ex. Facebook Pixel or chat widget', 'script-injector' )
 		),
 		'si_footer_field_render',
 		'si_scripts',
@@ -60,7 +60,7 @@ add_action( 'admin_init', function() {
 });
 
 
-// Adiciona página de configuração no menu
+// Add configuration page to the menu
 function si_admin_menu() {
 	$capability = is_multisite() && is_network_admin() ? 'manage_network_options' : 'manage_options';
 	$parent     = is_multisite() && is_network_admin() ? 'settings.php' : 'options-general.php';
@@ -78,7 +78,7 @@ add_action( 'admin_menu', 'si_admin_menu' );
 add_action( 'network_admin_menu', 'si_admin_menu' );
 
 
-// Renderiza a página de configurações
+// Render the settings page
 function si_settings_page() {
 	?>
 	<div class="wrap">
@@ -95,7 +95,7 @@ function si_settings_page() {
 }
 
 
-// Renderiza campos de textarea
+// Render textarea fields
 function si_header_field_render() {
 	$opts  = get_option( 'si_settings', [] );
 	$value = isset( $opts['header_scripts'] ) ? esc_textarea( $opts['header_scripts'] ) : '';
@@ -122,7 +122,7 @@ function si_footer_field_render() {
 }
 
 
-// Sanitiza os valores salvos
+// Sanitize saved values
 function si_sanitize_settings( $input ) {
 	if ( ! is_array( $input ) ) {
 		return [];
@@ -135,7 +135,7 @@ function si_sanitize_settings( $input ) {
 }
 
 
-// Imprime scripts no front-end
+// Output scripts on the front-end
 add_action( 'wp_head', function() {
 	$opts = get_option( 'si_settings', [] );
 	if ( ! empty( $opts['header_scripts'] ) ) {
