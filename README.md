@@ -15,7 +15,7 @@ Script Injector is a lightweight WordPress plugin that allows you to easily inse
 This plugin is engineered for minimal overhead:
 
 - **Admin/front-end code isolation**: Admin code (settings, menus, rendering) is never loaded on public pages.
-- **Single DB query**: Only one `get_option` call per request on the front-end (instead of three).
+- **Single DB query**: Only one `get_option` call per request on the front-end.
 - **Early bail-out**: If no scripts are configured, the plugin exits immediately — zero hooks registered.
 - **Conditional hooks**: Only hooks for non-empty script fields are registered.
 - **Zero global functions**: All logic uses closures, avoiding namespace pollution.
