@@ -90,7 +90,7 @@ if ( empty( $si_opts['header_scripts'] ) && empty( $si_opts['body_scripts'] ) &&
 $si_hooks = [
 	'wp_head'      => 'header_scripts',
 	'wp_body_open' => 'body_scripts',
-	'wp_footer'    => 'footer_scripts',
+	'wp_footer'    => 'footer_scripts'
 ];
 
 foreach ( $si_hooks as $hook => $key ) {
