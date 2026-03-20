@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Script Injector
- * Description:       Insert custom scripts into the site header, body, and footer (Google Analytics, Tag Manager, etc.).
+ * Description:       Insert custom scripts into the site header, body, and footer (Google Analytics, Tag Manager, etc.)
  * Version:           1.2.0
  * Author:            wpfuse
  * Author URI:        https://wpfuse.net
