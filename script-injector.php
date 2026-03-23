@@ -5,6 +5,7 @@
  * Version:           1.2.0
  * Author:            wpfuse
  * Author URI:        https://wpfuse.net
+ * GitHub Plugin URI: https://github.com/wp-fuse/script-injector
  * Text Domain:       script-injector
  * Domain Path:       /languages
  */
